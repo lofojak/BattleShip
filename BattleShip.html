@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Морской Бой с РандомБотом</title>
+		<meta name="description" content="Морской бой на JS">
+		<meta name="keywords" content="Морской бой, JavaScript, Игра, Браузерная игра">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<script scr=src.js></script>
+		<style>
+			@import "/style/main.css" screen; /* Стиль для вывода результата на монитор */
+			@import "/style/smart.css" print, handheld; /* Стиль для печати и смартфона */
+		</style>
+	</head> 
+	<body>
+		<h1 style="font-size: 120%; font-family: monospace; text-align: center">Морской бой</h1>
+		<main>
+			<table width="800px">
+				<tr>
+					<td>
+						<div style="text-align: center"> 
+    						Поле Игрока
+    					</div>
+    					<table class=PlayingField, id=PlayerField>
+    					</table>
+    				</td>
+    				<td>
+						<div style="text-align: center"> 
+    						Поле Противника
+    					</div>
+    					<table class=PlayingField, id=BotField>
+    					</table>
+    				</td>
+				</tr>
+			</table>
+    		<button name=ButtonRanking>Расстановка</button>
+    		<button name=ButtonStart>Старт матча</button>
+    		<button name=ButtonNextShip>Далее</button>
+    		<button name=ButtonPervShip>Редактировать предыдущие</button>
+    		<button name=ButtonRotate>Повернуть Корабль</button>
+  		</main>
+	</body> 
+</html>
