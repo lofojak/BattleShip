@@ -6,10 +6,70 @@
 		<meta name="description" content="Морской бой на JS">
 		<meta name="keywords" content="Морской бой, JavaScript, Игра, Браузерная игра">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
-		<script scr=src.js></script>
+		<script>
+			"use strict";
+/* 
+массивы FigureBot и FigurePlayer состоят из характеристик кораблей
+
+Структура массивов такова: [первый корабль, второй корабль, ..., эн-ный корабль]
+при этом с первого по N_one-нный порабли - однопалубные, с N_one+1 по N_one+N_two - двухпалубные
+и так далее
+
+А Корабль имеет структуру [Координаты начала корабля, направление, здоровье]
+Направление задаётся в виде бинарного числа, если true, то горизонтально, если нет, то вертикально
+Здоровье в виде 
+*/
+const N_one = 4; const N_two = 3; const N_three = 2; const N_fourth = 1;
+let FigureBot = [];
+let FigurePlayer = [];
+let PlayingFieldIsBisy = new Array(10*10);
+
+
+for (let Ship of FigureBot) {
+
+}
+
+
+
+// функция CheckNear проверяет, не находится ли корабль вблизи других
+// т.е. возвращает true если вблизи одной клетки у корабля нет других кораблей
+
+function CheckNearShip(ShipToCheck) {
+	
+}
+
+function Ranking() {
+    console.log("ButtonRanking is touched");
+    let PlayerField = document.getElementsByClassName("PlayingField");
+    let tr = document.createElement("tr");
+    tr.innerHTML = '<td> гег </td><td> </td><td> гег </td><td> гег </td><td> гег </td>';
+    Field[0].append(tr);
+}
+ 
+let ButtonRanking = document.getElementById("ButtonRanking");
+ButtonRanking.onclick = Ranking();
+
+function RotateShip() {
+	/* ПОКА НЕ СДЕЛАНО, можно не читать
+    // получаем значение поля key
+    var keyBox = document.search.key;
+    var val = keyBox.value;
+    // получаем элемент printBlock
+    var printBlock = document.getElementById("printBlock");
+    // создаем новый параграф
+    var pElement = document.createElement("p");
+    // устанавливаем у него текст
+    pElement.textContent = val;
+    // добавляем параграф в printBlock
+    printBlock.appendChild(pElement); // */
+}
+ 
+let ButtonRotate = document.getElementById("ButtonRotate");
+ButtonRotate.onclick = RotateShip();
+		</script>
 		<style>
-			@import "/style/main.css" screen; /* Стиль для вывода результата на монитор */
-			@import "/style/smart.css" print, handheld; /* Стиль для печати и смартфона */
+			@import "style/main.css" screen; /* Стиль для вывода результата на монитор */
+			@import "style/smart.css" print, handheld; /* Стиль для печати и смартфона */
 		</style>
 	</head> 
 	<body>
@@ -33,11 +93,15 @@
     				</td>
 				</tr>
 			</table>
+			<!--<button type="button" onclick="myFunction()"> myFunction </button> <-- можно ведь ещё так, без подключения-->
     		<button name=ButtonRanking>Расстановка</button>
     		<button name=ButtonStart>Старт матча</button>
     		<button name=ButtonNextShip>Далее</button>
     		<button name=ButtonPervShip>Редактировать предыдущие</button>
     		<button name=ButtonRotate>Повернуть Корабль</button>
   		</main>
+  		<div> 
+  			<a href="http://t.me/lofojak">Telegram</a>
+  		</div>
 	</body> 
 </html>
